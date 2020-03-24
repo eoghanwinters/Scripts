@@ -12,5 +12,7 @@ sudo apt install -y jenkins
 
 sleep 5s
 echo "Waiting for initial Admin Password"
+echo "Dont forget sudo visudo"
+echo "%jenkins ALL=(ALL:ALL) NOPASSWD: ALL"
 sleep 15s
 echo "Your initialAdminPassword is: $(sudo cat /var/lib/jenkins/secrets/initialAdminPassword)"
